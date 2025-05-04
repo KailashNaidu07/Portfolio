@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeXoft KE</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="CodeXoft KE - Full-stack developer specializing in web and mobile development, creating exceptional digital experiences through clean code and intuitive design.">
+    <meta name="keywords" content="web development, mobile apps, full-stack developer, PHP, React Native, MySQL, UI/UX design">
+    <meta name="author" content="Martin Wainaina">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CodeXoft KE - Full-stack Developer Portfolio">
+    <meta property="og:description" content="Professional full-stack developer specializing in web and mobile development.">
+    <meta property="og:image" content="assets/images/me.png">
+    <meta property="og:url" content="https://codexoft-ke.github.io/">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@codexoft_ke">
+    <meta name="twitter:title" content="CodeXoft KE - Full-stack Developer Portfolio">
+    <meta name="twitter:description" content="Professional full-stack developer specializing in web and mobile development.">
+    <meta name="twitter:image" content="assets/images/me.png">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <!-- Scripts -->
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-10 border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl mr-3">
+                        CX
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">CodeXoft</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Home</a>
+                    <a href="#about"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">About</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Skills</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Projects</a>
+                    <a href="https://blog.codexoft.tech"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Blog</a>
+                    <a href="#contact"
+                        class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">Let's
+                        Talk</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-16 6h16" />
+                        </svg>
+                        <svg class="h-6 w-6 hidden" id="close-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none absolute left-0 right-0 top-[80px] bg-white">
+                <div class="px-4 py-3 border-t border-gray-100">
+                    <div class="flex flex-col space-y-2">
+                        <a href="#home"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Home</a>
+                        <a href="#about"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">About</a>
+                        <a href="#skills"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Skills</a>
+                        <a href="#projects"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Projects</a>
+                        <a href="https://blog.codexoft.tech" target="_blank"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Blog</a>
+                        <a href="#contact"
+                            class="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700">Let's
+                            Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="min-h-screen pt-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Column - Content -->
+            <div class="text-center z-10 lg:text-left">
+                <div class="flex items-center lg:justify-start justify-center space-x-4 mb-6">
+                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                    <span class="text-gray-600 font-medium">Welcome to my portfolio</span>
+                </div>
+
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="block mb-2">I am</span>
+                    <span class="gradient-text typing-animation"></span>
+                </h1>
+
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Full-stack developer specializing in building exceptional digital experiences.
+                    Transforming ideas into elegant solutions through clean code and intuitive design.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-12  justify-center lg:justify-start">
+                    <div class="flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full">
+                        <i data-feather="check-circle" class="w-5 h-5 text-blue-600"></i>
+                        <span class="text-gray-700">6+ Years Experience</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-indigo-50 px-4 py-2 rounded-full">
+                        <i data-feather="users" class="w-5 h-5 text-indigo-600"></i>
+                        <span class="text-gray-700">50+ Projects Delivered</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <a href="#projects"
+                        class="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:shadow-lg transform hover:-translate-y-1 transition-all">
+                        View My Work
+                        <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                    <a href="#contact"
+                        class="inline-flex items-center px-8 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-500 hover:text-blue-500 transition-all">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-10 lg:block hidden">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl transform rotate-6"></div>
+                    <img src="assets/images/me.png" alt="Developer at work" class="relative rounded-3xl shadow-xl">
+                </div>
+
+                <div class="absolute -top-10 right-10 floating">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <i data-feather="code" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 left-10 floating" style="animation-delay: 1s;">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <i data-feather="smartphone" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack Banner -->
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8">
+                <h3 class="text-center text-gray-600 mb-8">Technologies I Work With</h3>
+                <div class="flex justify-center items-center space-x-12 flex-wrap gap-y-4">
+                    <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Adobe%20XD-FF61F6?style=for-the-badge&logo=adobe-xd&logoColor=white" alt="Adobe XD" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="h-8 rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Content  -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left Column - Personal Info -->
+                <div class="space-y-8">
+                    <div class="relative">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
+                        <div class="w-20 h-2 bg-blue-600 rounded-full mb-8"></div>
+
+                        <div class="prose prose-lg text-gray-600 space-y-6">
+                            <p>
+                                My name is Martin Wainaina, a Full-Stack Developer passionate about building comprehensive digital solutions. With over 6 years of experience, I specialize in creating modern websites, robust mobile applications, and scalable ERP systems that drive business growth and efficiency.
+                            </p>
+                            <p>
+                                My expertise spans across the full development stack, from crafting intuitive user interfaces to implementing complex backend systems. I focus on delivering high-performance solutions that combine clean code architecture with exceptional user experiences, helping businesses streamline their operations and achieve their digital transformation goals.
+                            </p>
+                        </div>
+
+                        <!-- Key Focus Areas -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                            <div class="p-6 bg-white rounded-xl shadow-lg experience-card">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <i data-feather="layout" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Architecture Design</h3>
+                                <p class="text-gray-600">Creating scalable and maintainable application architectures
+                                </p>
+                            </div>
+
+                            <div class="p-6 bg-white rounded-xl shadow-lg experience-card">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <i data-feather="users" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Team Leadership</h3>
+                                <p class="text-gray-600">Leading development teams and mentoring junior developers</p>
+                            </div>
+                        </div>
+
+                        <!-- Professional Stats -->
+                        <div class="flex flex-wrap gap-8 mt-12">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">6+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                                <div class="text-gray-600">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">30+</div>
+                                <div class="text-gray-600">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Experience & Skills -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6">Professional Journey</h3>
+
+                        <!-- Experience Timeline -->
+                        <div class="space-y-8">
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">Mobile App Developer</h4>
+                                    <span class="text-sm text-gray-500">2023 - Present</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Specializing in React Native development, creating innovative mobile solutions and cross-platform applications.
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">Full-Stack Developer</h4>
+                                    <span class="text-sm text-gray-500">2021 - 2023</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Led development of scalable web applications using PHP and MySQL, implementing robust backend solutions and optimizing database performance for high-traffic systems.
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">Frontend Developer</h4>
+                                    <span class="text-sm text-gray-500">2019 - 2021</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Specialized in creating responsive and interactive user interfaces.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Focus -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6">Current Focus</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="trending-up" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Performance Optimization</h4>
+                                    <p class="text-gray-600">Enhancing application performance and user experience</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="shield" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Security Implementation</h4>
+                                    <p class="text-gray-600">Implementing robust security measures and best practices
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="code" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Modern Technologies</h4>
+                                    <p class="text-gray-600">Exploring and implementing cutting-edge tech solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Technical Expertise</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+                    Combining modern technologies with provenmethodologies to deliver exceptional solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend Development -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">React Native</span>
+                                <span class="text-sm text-blue-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[75%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">HTML5/CSS3/JS</span>
+                                <span class="text-sm text-blue-600 font-semibold">Advanced</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[90%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">Bootstrap/Tailwind CSS</span>
+                                <span class="text-sm text-blue-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[85%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="server" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">PHP</span>
+                                <span class="text-sm text-green-600 font-semibold">Advanced</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[90%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">MySQL</span>
+                                <span class="text-sm text-green-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[80%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">REST API`s</span>
+                                <span class="text-sm text-green-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[75%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Skills Tags -->
+            <div class="mt-16 flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">REST APIs</span>
+                <span class="px-6 py-2 bg-green-50 text-green-700 rounded-full font-medium">ERP Systems</span>
+                <span class="px-6 py-2 bg-purple-50 text-purple-700 rounded-full font-medium">Adobe XD</span>
+                <span class="px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full font-medium">PHP</span>
+                <span class="px-6 py-2 bg-pink-50 text-pink-700 rounded-full font-medium">Mobile App Dev</span>
+                <span class="px-6 py-2 bg-yellow-50 text-yellow-700 rounded-full font-medium">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Filters -->
+    <section id="projects" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Featured Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">Exploring innovative solutions through
+                    technology</p>
+            </div>
+
+            <!-- Enhanced Filter System -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition-all hover:shadow-lg active"
+                    data-filter="all">
+                    All Projects
+                </button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-gray-700 font-medium border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="web">
+                    <i data-feather="globe" class="w-4 h-4 inline-block mr-2"></i>Web Apps
+                </button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-gray-700 font-medium border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="mobile">
+                    <i data-feather="smartphone" class="w-4 h-4 inline-block mr-2"></i>Mobile
+                </button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-gray-700 font-medium border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="backend">
+                    <i data-feather="server" class="w-4 h-4 inline-block mr-2"></i>Backend
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Church Management System -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/gospel-admin.jpg" alt="Gospel Admin System"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">Comprehensive church management system with member tracking, event scheduling, financial management and attendance monitoring.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Gospel Admin System</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://www.gospeladmin.co.ke" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M-Pesa PHP SDK -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="backend">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/mpesa-sdk.jpg" alt="M-Pesa PHP SDK"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">A comprehensive PHP SDK for integrating Safaricom's M-Pesa payment services, including STK Push, B2B, B2C, and more.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">M-Pesa PHP SDK</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">REST API</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Composer</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/codexoft-ke/mpesa-sdk" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                            <a href="https://docs.codexoft.tech/default-guide/codexoft-mpesa-php-sdk" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 font-medium">
+                                <i data-feather="book" class="w-4 h-4 mr-2"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MobileSasa PHP SDK -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="backend">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/mobilesasa.png" alt="MobileSasa SDK"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">PHP SDK for seamless integration with the Mobilesasa API for SMS messaging, contact group management, and mobile surveys.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">MobileSasa SDK</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">REST API</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Composer</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/codexoft-ke/mobilesasa-sdk" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                            <a href="https://github.com/codexoft-ke/mobilesasa-sdk?tab=readme-ov-file#readme" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 font-medium">
+                                <i data-feather="book" class="w-4 h-4 mr-2"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gospel Admin Mobile App -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/gospel-admin-app.jpg" alt="Gospel Admin Mobile App"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">Mobile app for church members to access services, view events, and manage their profiles on the go. Built with React Native and integrated with REST API.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Gospel Admin Mobile</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">React Native</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">REST API</span>
+                            <span class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://play.google.com/apps/internaltest/4701731865056779726" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="smartphone" class="w-4 h-4 mr-2"></i>
+                                View App
+                            </a>
+                            <a href="https://www.gospeladmin.co.ke" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 font-medium">
+                                <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Task Manager App -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="mobile">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/task-manager.jpg" alt="Task Manager App"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">A feature-rich task management application built with React Native. Includes task scheduling, reminders,custom notification, and progress tracking.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Task Manager App</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">React Native</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">Rest Api</span>
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">Firebase</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://github.com/codexoft-ke/task-manager" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                            <a href="#" class="inline-flex items-center text-gray-600 hover:text-gray-800 font-medium">
+                                <i data-feather="eye" class="w-4 h-4 mr-2"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Sections -->
+    <section id="testimonials" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Client Success Stories</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">Discover how we've helped businesses transform
+                    their digital presence and achieve remarkable results.</p>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+                                    <i data-feather="message-circle" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <img src="assets/images/clients/avatar-1.jpg" alt="Sarah Johnson"
+                                    class="w-16 h-16 rounded-full ml-8">
+                            </div>
+                            <blockquote class="text-gray-600 mb-6">
+                                "The innovative solutions and attention to detail transformed our digital presence. The
+                                results exceeded our expectations and delivered real business value."
+                            </blockquote>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <p class="text-blue-600">CEO, TechStart</p>
+                                </div>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+                                    <i data-feather="message-circle" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <img src="assets/images/clients/avatar-2.jpg" alt="Michael Chen"
+                                    class="w-16 h-16 rounded-full ml-8">
+                            </div>
+                            <blockquote class="text-gray-600 mb-6">
+                                "The development team's expertise in healthcare technology helped us create a secure,
+                                scalable platform that revolutionized our patient care system."
+                            </blockquote>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                                    <p class="text-blue-600">CTO, HealthTech</p>
+                                </div>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <div class="relative mb-8">
+                                <div
+                                    class="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center">
+                                    <i data-feather="message-circle" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <img src="assets/images/clients/avatar-3.jpg" alt="Emily Rodriguez"
+                                    class="w-16 h-16 rounded-full ml-8">
+                            </div>
+                            <blockquote class="text-gray-600 mb-6">
+                                "The e-commerce platform developed for us perfectly balances user experience with
+                                powerful features, helping us achieve record-breaking sales growth."
+                            </blockquote>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                                    <p class="text-blue-600">Product Manager, RetailX</p>
+                                </div>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next after:content-[''] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+                    <i data-feather="chevron-right" class="w-6 h-6 text-gray-800"></i>
+                </div>
+                <div class="swiper-button-prev after:content-[''] w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+                    <i data-feather="chevron-left" class="w-6 h-6 text-gray-800"></i>
+                </div>
+
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Latest Insights</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">Explore the latest articles on development,
+                    design, and technology trends.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                        <img src="assets/images/blogs/blog-1.jpg" alt="Blog Post"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span
+                                class="inline-block px-4 py-1 bg-blue-600 text-white text-sm rounded-full mb-3">Development</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Scaling React Applications: Best Practices
+                            </h3>
+                            <p class="text-gray-200 mb-4">Learn about the best practices for scaling React applications,
+                                including state management and performance optimization.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="assets/images/me.png" alt="Author" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Codexoft KE</h4>
+                                <p class="text-gray-500 text-sm">Jan 15, 2025</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Blog Card 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                        <img src="assets/images/blogs/blog-1.jpg" alt="Blog Post"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span
+                                class="inline-block px-4 py-1 bg-blue-600 text-white text-sm rounded-full mb-3">Development</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Scaling React Applications: Best Practices
+                            </h3>
+                            <p class="text-gray-200 mb-4">Learn about the best practices for scaling React applications,
+                                including state management and performance optimization.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="assets/images/me.png" alt="Author" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Codexoft KE</h4>
+                                <p class="text-gray-500 text-sm">Jan 15, 2025</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Blog Card 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                        <img src="assets/images/blogs/blog-1.jpg" alt="Blog Post"
+                            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span
+                                class="inline-block px-4 py-1 bg-blue-600 text-white text-sm rounded-full mb-3">Development</span>
+                            <h3 class="text-xl font-bold text-white mb-2">Scaling React Applications: Best Practices
+                            </h3>
+                            <p class="text-gray-200 mb-4">Learn about the best practices for scaling React applications,
+                                including state management and performance optimization.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <img src="assets/images/me.png" alt="Author" class="w-10 h-10 rounded-full">
+                            <div>
+                                <h4 class="font-medium text-gray-900">Codexoft KE</h4>
+                                <p class="text-gray-500 text-sm">Jan 15, 2025</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center space-x-2">
+                            <span>Read More</span>
+                            <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Let's Create Something Together</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+                    Have a project in mind? Let's discuss how we can bring your ideas to life.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="map-pin" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Location</h3>
+                                <p class="text-gray-600">Nakuru, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="mail" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+                                <a href="mailto:info@codexoft.tech" class="text-blue-600 hover:text-blue-800">
+                                    info@codexoft.tech
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="phone" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Phone</h3>
+                                <a href="tel:+254795375735" class="text-blue-600 hover:text-blue-800">
+                                    +(254) 795 375 735
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="https://github.com/codexoft-ke" target="_blank" class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-blue-50 transition-colors">
+                            <i data-feather="github" class="w-6 h-6 text-gray-600"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/codexoft-ke" target="_blank"  class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-blue-50 transition-colors">
+                            <i data-feather="linkedin" class="w-6 h-6 text-gray-600"></i>
+                        </a>
+                        <a href="https://x.com/codexoft_ke" target="_blank" class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-blue-50 transition-colors">
+                            <i data-feather="twitter" class="w-6 h-6 text-gray-600"></i>
+                        </a>
+                        <a href="https://www.facebook.com/codexoftke" target="_blank"
+                            class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-blue-50 transition-colors">
+                            <i data-feather="facebook" class="w-6 h-6 text-gray-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                    placeholder="Your name" name="name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                    placeholder="your@email.com" name="email" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                placeholder="Project discussion" name="subject" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="6"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                                placeholder="Tell me about your project..." name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitting-button"
+                            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-0.5 transition-all duration-150">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand Column -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl">
+                            CX
+                        </div>
+                        <span class="text-2xl font-bold text-white">CodeXoft</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Crafting digital experiences through innovative development and thoughtful design.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/codexoft-ke" target="_blank"  class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/codexoft-ke" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://x.com/codexoft_ke" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/codexoftke" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="https://docs.codexoft.tech" class="text-gray-400 hover:text-white transition-colors">Docs</a></li>
+                        <li><a href="https://blog.codexoft.tech" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mobile Development</a> </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#"class="text-gray-400 hover:text-white transition-colors">TechnicalConsultation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Code Review</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Stay Updated</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to my newsletter for the latest updates on projects and tech insights.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="md:flex md:items-center md:justify-between text-gray-400 text-sm">
+                    <div class="text-center md:text-left">
+                        <p>&copy; 2025 CodeXoft. All rights reserved.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-center md:text-right">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span class="mx-3">|</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
