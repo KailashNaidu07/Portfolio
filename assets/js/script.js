@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Replace with your GitHub Pages URL or repo name
-const namespace = "kailashnaidu07.github.io"; 
+const namespace = "kailashnaidu07.github.io/Portfolio/"; 
 const key = "homepage-visits"; // Unique key for this page
 
 // Fetch and update counter
