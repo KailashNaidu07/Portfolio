@@ -287,22 +287,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-
-
-
-
-// Replace with your GitHub Pages URL or repo name
-const namespace = "kailashnaidu07.github.io/Portfolio/"; 
-const key = "homepage-visits"; // Unique key for this page
-
-// Fetch and update counter
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('visit-counter').textContent = data.value;
-  })
-  .catch(error => {
-    console.error("Failed to load visit count. Using fallback.", error);
-    document.getElementById('visit-counter').textContent = "1000+"; // Fallback
-  });
