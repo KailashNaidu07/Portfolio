@@ -966,46 +966,6 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
-
-    <script>
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const form = e.target;
-    const button = document.getElementById('submitting-button');
-    const originalText = button.textContent;
-    
-    // Show loading state
-    button.disabled = true;
-    button.textContent = 'Sending...';
-    
-    try {
-        const formData = new FormData(form);
-        const response = await fetch('/send-message', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(Object.fromEntries(formData))
-        });
-        
-        const result = await response.json();
-        
-        if (result.success) {
-            alert('Message sent successfully!');
-            form.reset();
-        } else {
-            throw new Error(result.error || 'Failed to send message');
-        }
-    } catch (error) {
-        alert('Error: ' + error.message);
-        console.error(error);
-    } finally {
-        button.disabled = false;
-        button.textContent = originalText;
-    }
-});
-</script>
 </body>
 
 </html>
