@@ -1,5 +1,5 @@
-# app.py
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
+from flask_cors import CORS  # Remove if not needed
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -8,43 +8,45 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__, static_folder='assets')
+app = Flask(__name__)
+CORS(app)  # Remove this line if frontend/backend are same domain
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+# Email Configuration
+EMAIL_USER = os.getenv('EMAIL_USER')
+EMAIL_PASS = os.getenv('EMAIL_PASS')
+RECIPIENT_EMAIL = os.getenv('YOUR_EMAIL')
 
-@app.route('/send-message', methods=['POST'])
-def send_message():
-    data = request.json
-    
-    # Email configuration
-    sender_email = os.getenv('EMAIL_USER')
-    sender_password = os.getenv('EMAIL_PASS')
-    receiver_email = os.getenv('YOUR_EMAIL')
-    
-    # Create message
-    message = MIMEMultipart()
-    message['From'] = f"Portfolio Contact <{sender_email}>"
-    message['To'] = receiver_email
-    message['Subject'] = f"New message: {data.get('subject', 'No subject')}"
-    
-    # Email body
-    body = f"""
-    Name: {data.get('name', 'Not provided')}
-    Email: {data.get('email', 'Not provided')}
-    Message: {data.get('message', 'No message')}
-    """
-    
-    message.attach(MIMEText(body, 'plain'))
-    
+@app.route('/api/contact', methods=['POST'])
+def handle_contact():
     try:
+        data = request.get_json()
+        
+        # Validate required fields
+        if not all([data.get('name'), data.get('email'), data.get('message')]):
+            return jsonify({"error": "Missing required fields"}), 400
+
+        # Create email
+        msg = MIMEMultipart()
+        msg['From'] = EMAIL_USER
+        msg['To'] = RECIPIENT_EMAIL
+        msg['Subject'] = f"New Contact: {data.get('subject', 'No Subject')}"
+        
+        body = f"""
+        Name: {data['name']}
+        Email: {data['email']}
+        Message: {data['message']}
+        """
+        msg.attach(MIMEText(body, 'plain'))
+
+        # Send email
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-            server.login(sender_email, sender_password)
-            server.sendmail(sender_email, receiver_email, message.as_string())
-        return jsonify({'success': True, 'message': 'Message sent successfully!'})
+            server.login(EMAIL_USER, EMAIL_PASS)
+            server.send_message(msg)
+        
+        return jsonify({"success": True, "message": "Email sent successfully!"})
+
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+        return jsonify({"error": str(e), "success": False}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

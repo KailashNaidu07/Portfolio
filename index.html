@@ -980,26 +980,33 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     button.textContent = 'Sending...';
     
     try {
-        const formData = new FormData(form);
-        const response = await fetch('/send-message', {
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            subject: form.subject.value,
+            message: form.message.value
+        };
+
+        const response = await fetch('/api/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(Object.fromEntries(formData))
+            body: JSON.stringify(formData)
         });
-        
+
         const result = await response.json();
         
-        if (result.success) {
-            alert('Message sent successfully!');
-            form.reset();
-        } else {
+        if (!response.ok) {
             throw new Error(result.error || 'Failed to send message');
         }
+        
+        alert(result.message || 'Message sent successfully!');
+        form.reset();
+        
     } catch (error) {
         alert('Error: ' + error.message);
-        console.error(error);
+        console.error('Submission error:', error);
     } finally {
         button.disabled = false;
         button.textContent = originalText;
