@@ -967,52 +967,6 @@
     </footer>
     <script src="assets/js/script.js"></script>
 
-    <script>
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const form = e.target;
-    const button = document.getElementById('submitting-button');
-    const originalText = button.textContent;
-    
-    // Show loading state
-    button.disabled = true;
-    button.textContent = 'Sending...';
-    
-    try {
-        const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            subject: form.subject.value,
-            message: form.message.value
-        };
-
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData)
-        });
-
-        const result = await response.json();
-        
-        if (!response.ok) {
-            throw new Error(result.error || 'Failed to send message');
-        }
-        
-        alert(result.message || 'Message sent successfully!');
-        form.reset();
-        
-    } catch (error) {
-        alert('Error: ' + error.message);
-        console.error('Submission error:', error);
-    } finally {
-        button.disabled = false;
-        button.textContent = originalText;
-    }
-});
-</script>
 </body>
 
 </html>
