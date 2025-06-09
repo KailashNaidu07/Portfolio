@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailash Kumar's Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Kailash Kumar - Full-stack developer specializing in web and mobile development, creating exceptional digital experiences through clean code and intuitive design.">
+    <meta name="keywords" content="web development, mobile apps, full-stack developer, PHP, React Native, MySQL, UI/UX design">
+    <meta name="author" content="Martin Wainaina">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kailash Kumar - Full-stack Developer Portfolio">
+    <meta property="og:description" content="Professional full-stack developer specializing in web and mobile development.">
+    <meta property="og:image" content="assets/images/me.png">
+    <meta property="og:url" content="https://codexoft-ke.github.io/">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@codexoft_ke">
+    <meta name="twitter:title" content="Kailash Kumar - Full-stack Developer Portfolio">
+    <meta name="twitter:description" content="Professional full-stack developer specializing in web and mobile development.">
+    <meta name="twitter:image" content="assets/images/me.png">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <!-- Scripts -->
+    <!--<script src="https://cdn.tailwindcss.com"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-10 border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div
+                        class="w-20 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl mr-3">
+                        KOLA
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">KAILASH KUMAR</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Home</a>
+                    <a href="#about"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">About</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Skills</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Projects</a>
+                    <a href="#Achievements"
+                        class="nav-link text-gray-800 hover:text-blue-600 px-3 py-2 font-medium transition-colors">Achievements</a>
+                    <a href="#contact"
+                        class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">Let's
+                        Talk</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" id="menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-16 6h16" />
+                        </svg>
+                        <svg class="h-6 w-6 hidden" id="close-icon" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="md:hidden transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none absolute left-0 right-0 top-[80px] bg-white">
+                <div class="px-4 py-3 border-t border-gray-100">
+                    <div class="flex flex-col space-y-2">
+                        <a href="#home"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Home</a>
+                        <a href="#about"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">About</a>
+                        <a href="#skills"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Skills</a>
+                        <a href="#projects"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Projects</a>
+                        <a href="https://blog.codexoft.tech" target="_blank"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-gray-50">Blog</a>
+                        <a href="#contact"
+                            class="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700">Let's
+                            Talk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="min-h-screen pt-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-30"></div>
+
+        <div class="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Column - Content -->
+            <div class="text-center z-10 lg:text-left">
+                <div class="flex items-center lg:justify-start justify-center space-x-4 mb-6">
+                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                    <span class="text-gray-600 font-medium">Welcome to my portfolio</span>
+                </div>
+
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="block mb-2">I am K Kailash Kumar</span>
+                    <span class="gradient-text typing-animation"></span>
+                </h1>
+
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Skilled full-stack developer creating high-quality, scalable web applications. Passionate about turning ideas into user-friendly digital solutions with clean and efficient code.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-12  justify-center lg:justify-start">
+                   
+                </div>
+
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <a href="/path/to/your-resume.pdf" download
+   class="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium hover:shadow-lg transform hover:-translate-y-1 transition-all">
+   Download Resume
+   <i data-feather="download" class="w-4 h-4 ml-2"></i>
+</a>
+                    <a href="#contact"
+                        class="inline-flex items-center px-8 py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium hover:border-blue-500 hover:text-blue-500 transition-all">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative z-10 lg:block hidden">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl transform rotate-6"></div>
+                    <img src="assets/images/me.png" alt="Developer at work" class="relative rounded-3xl shadow-xl">
+                </div>
+
+                <div class="absolute -top-10 right-10 floating">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <i data-feather="code" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 left-10 floating" style="animation-delay: 1s;">
+                    <div class="bg-white p-4 rounded-xl shadow-lg">
+                        <i data-feather="smartphone" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack Banner -->
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8">
+                <h3 class="text-center text-gray-600 mb-8">Technologies I Work With</h3>
+                <div class="flex justify-center items-center space-x-12 flex-wrap gap-y-4">
+                    <!-- .NET Ecosystem -->
+                    <img src="https://img.shields.io/badge/-.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt=".NET" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Entity%20Framework-512BD4?style=for-the-badge&logo=.net&logoColor=white" alt="Entity Framework" class="h-8 rounded-lg">
+                    
+                    <!-- Python Ecosystem -->
+                    <img src="https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" class="h-8 rounded-lg">
+                    
+                    <!-- Databases -->
+                    <img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" class="h-8 rounded-lg">
+                    
+                    <!-- Cloud/DevOps -->
+                    <img src="https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" class="h-8 rounded-lg">
+                    
+                    <!-- AI/ML (Python-specific) -->
+                    <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" class="h-8 rounded-lg">
+                    
+                    <!-- Frontend -->
+                    <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" class="h-8 rounded-lg">
+                    <img src="https://img.shields.io/badge/-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" class="h-8 rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Content  -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left Column - Personal Info -->
+                <div class="space-y-8">
+                    <div class="relative">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">About Me</h2>
+                        <div class="w-20 h-2 bg-blue-600 rounded-full mb-8"></div>
+
+                        <div class="prose prose-lg text-gray-600 space-y-6">
+                            <p>
+                                I am a B.Tech graduate specializing in Artificial Intelligence and Machine Learning, passionate about using technology to solve real-world problems. With hands-on experience in Python, TensorFlow, and PyTorch, I’ve built projects like an IPL Score Predictor and a College Management System using Django. 
+                            </p>
+                            <p>
+                                Currently, I’m expanding my skills by learning .NET to strengthen my full-stack development capabilities. My coursework in web development, machine learning, and programming reflects my adaptability and enthusiasm for diverse tech challenges. A quick learner at heart, I stay updated with the latest advancements in AI and software development. I’m eager to apply my skills in machine learning and .NET to build impactful solutions and contribute to innovative projects. Open to opportunities as a Machine Learning Engineer or Full-Stack Developer, as well as collaborations that drive progress in tech.
+                            </p>
+                        </div>
+
+                        <!-- Key Focus Areas -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                            <div class="p-6 bg-white rounded-xl shadow-lg experience-card">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <i data-feather="layout" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">AI Integration</h3>
+                                <p class="text-gray-600">Implementing Python-based AI solutions in .NET applications
+                                </p>
+                            </div>
+
+                            <div class="p-6 bg-white rounded-xl shadow-lg experience-card">
+                                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                                    <i data-feather="users" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+                                <p class="text-gray-600">Building scalable APIs and microservices with Django and .NET Core</p>
+                            </div>
+                        </div>
+
+                        <!-- Professional Stats -->
+                        <!-- <div class="flex flex-wrap gap-8 mt-12">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">6+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                                <div class="text-gray-600">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-blue-600 mb-2">30+</div>
+                                <div class="text-gray-600">Happy Clients</div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Right Column - Experience & Skills -->
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6">Educational Journey</h3>
+
+                        <!-- Experience Timeline -->
+                        <div class="space-y-8">
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">B-Tech (AI&ML)</h4>
+                                    <span class="text-sm text-gray-500">2020 - 2024</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Specialized AI/ML engineering degree focused on machine learning systems development.
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">Intermediate</h4>
+                                    <span class="text-sm text-gray-500">2018 - 2020</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Intermediate in MPC (Maths, Physics, Chemistry) - Strong foundation in analytical problem-solving and scientific principles.
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8 border-l-2 border-blue-200">
+                                <div class="absolute left-0 top-0 w-4 h-4 -ml-2 rounded-full bg-blue-600"></div>
+                                <div class="mb-1 flex items-center justify-between">
+                                    <h4 class="text-lg font-semibold text-gray-900">SSC</h4>
+                                    <span class="text-sm text-gray-500">2017 - 2018</span>
+                                </div>
+                                <p class="text-gray-600">
+                                    Secondary Education (SSC) - Cultivated core analytical skills in math and sciences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Focus -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6">Current Focus</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="trending-up" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Backend Optimization</h4>
+                                    <p class="text-gray-600">Enhancing Python & .NET application performance and API response times</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="shield" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Cloud-Native Development</h4>
+                                    <p class="text-gray-600">Building scalable solutions with Azure Functions/Django in cloud environments</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-feather="code" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Secure Architecture</h4>
+                                    <p class="text-gray-600">Implementing authentication (OAuth/JWT) and data encryption in .NET/Python apps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Technical Expertise</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+                    Combining modern technologies with provenmethodologies to deliver exceptional solutions
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend Development -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">Angular </span>
+                                <span class="text-sm text-blue-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[75%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">HTML5/CSS3/JS</span>
+                                <span class="text-sm text-blue-600 font-semibold">Advanced</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[90%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">Bootstrap/Tailwind CSS</span>
+                                <span class="text-sm text-blue-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[85%] h-full bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="server" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">C#</span>
+                                <span class="text-sm text-green-600 font-semibold">Advanced</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[90%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">SQL Server</span>
+                                <span class="text-sm text-green-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[80%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700 font-medium">ASP.NET</span>
+                                <span class="text-sm text-green-600 font-semibold">Intermediate</span>
+                            </div>
+                            <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+                                <div
+                                    class="w-[75%] h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full transform origin-left transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Skills Tags -->
+            <div class="mt-16 flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">Window's Programming</span>
+                <span class="px-6 py-2 bg-green-50 text-green-700 rounded-full font-medium">ADO.NET</span>
+                <span class="px-6 py-2 bg-purple-50 text-purple-700 rounded-full font-medium">ASP.NET Core</span>
+                <span class="px-6 py-2 bg-indigo-50 text-indigo-700 rounded-full font-medium">Blazor</span>
+                <span class="px-6 py-2 bg-pink-50 text-pink-700 rounded-full font-medium">Web API</span>
+                <span class="px-6 py-2 bg-yellow-50 text-yellow-700 rounded-full font-medium">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Filters -->
+    <section id="projects" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Featured Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">Exploring innovative solutions through
+                    technology</p>
+            </div>
+
+            <!-- Enhanced Filter System -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition-all hover:shadow-lg active"
+                    data-filter="all">
+                    All Projects
+                </button>
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-gray-700 font-medium border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="web">
+                    <i data-feather="globe" class="w-4 h-4 inline-block mr-2"></i>Web Apps
+                </button>
+                
+                <button
+                    class="px-6 py-2 rounded-full bg-white text-gray-700 font-medium border border-gray-200 hover:border-blue-500 hover:text-blue-600 transition-all"
+                    data-filter="backend">
+                    <i data-feather="server" class="w-4 h-4 inline-block mr-2"></i>Backend
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Church Management System -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="web">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/ipl.png" alt="IPL Score Prediction"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">IPL score prediction uses historical data, player stats, and match conditions to estimate a team’s final score. Machine learning models analyze factors like run rate, wickets, and overs left to make accurate forecasts, aiding strategy and fan engagement.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">IPL Score Prediction</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">Python</span>
+                             <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+  Flask
+</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">MySQL</span>
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://ipl-score-prediction-etfb.onrender.com/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                Website
+                            </a>
+                             <a href="https://github.com/KailashNaidu07/IPL-Score-Prediction" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M-Pesa PHP SDK -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="backend">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/qr.png" alt="M-Pesa PHP SDK"
+    class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">A Python-based tool to generate QR codes from text or URLs using the qrcode library. Useful for quick and easy code creation for sharing or business use.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">QR Code Generator</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">PYthon</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">Flask</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">HTML/CSS</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            
+
+                            <a href="https://qr-code-generator-9s60.onrender.com/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                Website
+                            </a>
+                            <a href="https://github.com/KailashNaidu07/QR-Code-Generator" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MobileSasa PHP SDK -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-category="backend">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/projects/wine.jpg" alt="MobileSasa SDK"
+                            class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p class="text-sm">A machine learning project that predicts wine quality based on physicochemical features. Built using scikit-learn, it applies classification models to assess quality scores from a given dataset.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Wine Quality Prediction</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">HTML?CSS</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium">Python</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Django</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <a href="https://wine-quality-prediction-rwsv.onrender.com/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="globe" class="w-4 h-4 mr-2"></i>
+                                Website
+                            </a>
+                            <a href="https://github.com/KailashNaidu07/wine-quality-prediction" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                                <i data-feather="github" class="w-4 h-4 mr-2"></i>
+                                View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Sections -->
+    
+
+    <!-- Blog Section -->
+    <section id="Achievements" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Achievements</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">Discover key accomplishments and milestones that highlight my professional journey.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+               <div class="group">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+        <!-- Replace with your project screenshot/demo -->
+        <img src="assets/images/blogs/siliconvalley4u certificate_page-0001.jpg" alt="Hackathon Project Demo"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+            <!-- Tag: Highlight "Hackathon" and "Web Dev" -->
+            <span class="inline-block px-4 py-1 bg-purple-600 text-white text-sm rounded-full mb-3">Hackathon Winner</span>
+            <h3 class="text-xl font-bold text-white mb-2">24-Hour Web Dev Challenge: Built [Project Name]</h3>
+            <p class="text-gray-200 mb-4">Secured <strong>2nd place</strong> among 50+ teams by building a [brief description, e.g., "real-time collaborative editor using React & Firebase"].</p>
+        </div>
+    </div>
+    <div class="mt-6 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <!-- Your profile pic or team logo -->
+            <img src="assets/images/me.png" alt="Team/You" class="w-10 h-10 rounded-full">
+            <div>
+                <h4 class="font-medium text-gray-900">K Kailash Kumar/Team Name(Ninja Warriors)]</h4>
+                <p class="text-gray-500 text-sm">[Hackathon Date] • 24-Hour Sprint</p>
+            </div>
+        </div>
+        <!-- Link to project (GitHub/Live Demo) -->
+        <a href="#" class="text-purple-600 hover:text-purple-800 flex items-center space-x-2">
+            <span>See Project</span>
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+<!-- Blog 2 -->
+
+<div class="group">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+        <!-- Replace with your project screenshot/demo -->
+        <img src="assets/images/blogs/siliconvalley4u certificate_page-0001.jpg" alt="Hackathon Project Demo"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+            <!-- Tag: Highlight "Hackathon" and "Web Dev" -->
+            <span class="inline-block px-4 py-1 bg-purple-600 text-white text-sm rounded-full mb-3">Certification</span>
+            <h3 class="text-xl font-bold text-white mb-2">Python & Machine Learning</h3>
+            <p class="text-gray-200 mb-4">Certified by Siliconvalley4u, California USA | Issued April 27, 2023</p>
+        </div>
+    </div>
+    <div class="mt-6 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <!-- Your profile pic or team logo -->
+            <img src="assets/images/me.png" alt="Team/You" class="w-10 h-10 rounded-full">
+            <div>
+                <h4 class="font-medium text-gray-900">K Kailash Kumar</h4>
+                <p class="text-gray-500 text-sm">Verified Credential</p>
+            </div>
+        </div>
+       
+        <a href="https://siliconvalley4u.verify.it/attainr/8d22d48a-311b-4d97-b9f5-3e3a6c07877a"     target="_blank" class="text-purple-600 hover:text-purple-800 flex items-center space-x-2">
+            <span>Verify Credential</span>
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+    </div>
+</div>
+
+<!-- BLOG3 -->
+
+
+
+       <div class="group">
+    <div class="relative overflow-hidden rounded-2xl shadow-lg">
+        <!-- Replace with your project screenshot/demo -->
+        <img src="assets/images/blogs/DATA SCIENCE INTERNSHIP OFFER LETTER_page-0001.jpg" alt="Hackathon Project Demo"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6">
+            <!-- Tag: Highlight "Hackathon" and "Web Dev" -->
+            <span class="inline-block px-4 py-1 bg-purple-600 text-white text-sm rounded-full mb-3">OFFER LETTER</span>
+            <h3 class="text-xl font-bold text-white mb-2">INTERNSHIP OFFER LETTER</h3>
+            <p class="text-gray-200 mb-4">Selected as a Data Science Intern at the organization for a 2-month internship starting from 02-02-2024 (Intern ID: B24SN0200).
+</p>
+        </div>
+    </div>
+    <div class="mt-6 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <!-- Your profile pic or team logo -->
+            <img src="assets/images/me.png" alt="Team/You" class="w-10 h-10 rounded-full">
+            <div>
+                <h4 class="font-medium text-gray-900">K Kailash Kumar</h4>
+                <p class="text-gray-500 text-sm">Specialized in AI&ML Engineering</p>
+            </div>
+        </div>
+        <!-- Link to project (GitHub/Live Demo) -->
+        <a href="https://drive.google.com/file/d/167_M27GaEIVKin3G5TYwO8ANuwWq-7Mc/view?usp=sharing" target="_blank" class="text-purple-600 hover:text-purple-800 flex items-center space-x-2">
+            <span>Letter Link</span>
+            <i data-feather="arrow-right" class="w-4 h-4"></i>
+        </a>
+    </div>
+</div>   
+
+
+
+            </div>
+        </div>
+
+
+
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-100 rounded-full filter blur-3xl opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900">Let's Create Something Together</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 text-lg max-w-2xl mx-auto">
+                    Have a project in mind? Let's discuss how we can bring your ideas to life.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="map-pin" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Location</h3>
+                                <p class="text-gray-600">Hydrabad, Telangana</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="mail" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+                                <a href="mailto:kailashnaidu07@gmail.com" class="text-blue-600 hover:text-blue-800">
+                                   kailashnaidu07@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i data-feather="phone" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">Phone</h3>
+                                <a href="tel:+919491082699" class="text-blue-600 hover:text-blue-800">
+                                    +91 949108****
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="https://github.com/KailashNaidu07" target="_blank" 
+   class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors">
+  <i data-feather="github" class="w-6 h-6 text-gray-600"></i>
+</a>
+
+                        <a href="https://www.linkedin.com/in/kailash-kumar-kola-32637a250" target="_blank" 
+   class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-blue-50 transition-colors">
+  <i data-feather="linkedin" class="w-6 h-6 text-gray-600"></i>
+</a>
+
+                        <a href="mailto:kailashnaidu07@gmail.com" 
+   class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-red-50 transition-colors">
+  <i data-feather="mail" class="w-6 h-6 text-gray-600"></i>
+</a>
+
+                        <a href="https://www.instagram.com/__kailash_naidu__" target="_blank" 
+   class="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center hover:bg-pink-50 transition-colors">
+  <i data-feather="instagram" class="w-6 h-6 text-gray-600"></i>
+</a>
+
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                    placeholder="Your name" name="name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                    placeholder="your@email.com" name="email" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                placeholder="Project discussion" name="subject" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="6"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                                placeholder="Tell me about your project..." name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitting-button"
+                            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-0.5 transition-all duration-150">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand Column -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-20 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg">
+    KOLA
+</div>
+                        <span class="text-xl font-bold text-white">KAILASH KUMAR</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Delivering seamless user experiences through efficient frontend and robust backend development.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/KailashNaidu07" target="_blank"  class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.instagram.com/__kailash_naidu__" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+
+                         <a href="mailto:kailashnaidu07@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                         <i data-feather="mail" class="w-5 h-5"></i>
+                         </a>
+
+                         <a href="https://www.linkedin.com/in/kailash-kumar-kola-32637a250" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                         <i data-feather="linkedin" class="w-5 h-5"></i>
+                         </a>
+                         <a href="tel:+919491082699" class="text-gray-400 hover:text-white transition-colors">
+                         <i data-feather="phone" class="w-5 h-5"></i>
+                         </a>
+
+
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                             <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#projects"
+                        class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#Achievements" class="text-gray-400 hover:text-white transition-colors">Achievements</a></li>
+                   
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Mobile Development</a> </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#"class="text-gray-400 hover:text-white transition-colors">TechnicalConsultation</a></li>
+                        
+                       
+
+                     
+
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Don’t miss out</h3>
+                    <p class="text-gray-400 mb-4">
+                       get my latest work and tech ideas in your inbox.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="md:flex md:items-center md:justify-between text-gray-400 text-sm">
+                    <div class="text-center md:text-left">
+                        <p>&copy; 2025 Kola Kailash Kumar. All rights reserved.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 text-center md:text-right">
+                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <span class="mx-3">|</span>
+                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
